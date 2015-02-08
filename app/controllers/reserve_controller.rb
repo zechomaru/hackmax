@@ -3,11 +3,11 @@ class ReserveController < ApplicationController
 
 	end
 	def show
-		show = Show.find(params[:id])
-		theater = show.theater
-		theater_id = theater.id
+		@show = Show.find(params[:id]).theater.seats
 
-		@seats = Seat.where(theater_id: theater_id)		
+		#theater = show.theater
+		#theater_id = theater.id
+		#@seats = Seat.where(theater_id: theater_id)		
 	end
 	def create
 		@reserve = Reserve.new
