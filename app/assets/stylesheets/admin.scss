@@ -1,0 +1,128 @@
+// Place all the styles related to the admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*helper*/
+.prueba{
+    display: none;
+}
+.color_white{
+    color: white;
+}
+
+/*helper*/
+/*DASHBOARD*/
+.boxs{
+    margin-top: 50px;
+}
+
+.box, .box2, .box3, .box4, .box5{
+    display: inline-block;
+    padding: 10px;
+    margin-right: 20px;
+    height: 130px;
+    width: 200px;
+    vertical-align: top;
+}
+.title_box{
+    font-size: 1.5em;
+    text-align: left;
+    color: white;
+}
+.box{
+    background-color: #2F88F0;
+    transition: all 0.5s;
+}
+.box2{
+    background-color: #03A303;
+    transition: all 0.5s;
+}
+.box3{
+    background-color: #FFC40E;
+    transition: all 0.5s;
+}
+.box4{
+    background-color: #603CBA;
+    transition: all 0.5s;
+}
+.box5{
+    background-color: #EB3D01;
+    transition: all 0.5s;
+}
+.box:hover, 
+.box2:hover, 
+.box3:hover, 
+.box4:hover, 
+.box5:hover{
+    background-color: gray;
+    height: 135px;
+    width: 210px;
+}
+.count_adm{
+    text-align: right;
+    font-size: 2.3em;
+    color: white;
+    margin-right: 25px;
+    margin-top: 6px;
+}
+.icon_box{
+    color: white;
+    font-size: 2em;
+    font-family: 'FontAwesome';
+    margin-left: 20px;
+
+}
+
+/*DASHBOARD*/
+
+/*movie*/
+.color_movie{
+    color: red;
+}
+.movie_show{
+    background-color: #2F88F0;
+    margin-top: 50px;
+
+}
+.form_movie{
+    color: black;
+    margin-top: 10px;
+    display: none;
+}
+.form_create{
+    margin-top: 10px;
+}
+.upload_img{
+    margin: 0 auto;
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.table_styl{
+    color: #000000;
+}
+/*movie*/
+/*show*/
+.movie_shows{
+    background-color: #03A303;
+    margin-top: 50px;
+}
+/*show*/
+/*Theater*/
+.theater_shows{
+    background-color: #EC971F;
+    margin-top: 50px;
+}
+/*Theater*/
+
+/*show*/
+/*show*/
+/*background-color: #603CBA;
+background-color: #EB3D01;*/
+/*show*/
+/*show*/
+
+/*show*/
+/*show*/
+
+/*show*/
+/*show*/

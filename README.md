@@ -1,2 +1,2 @@
 # hackmax
-sistema web de cine
+hackamx

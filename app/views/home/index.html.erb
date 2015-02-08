@@ -1,0 +1,32 @@
+<div class="container-fluid">
+	<div class="header navbar-fixed-top" >
+		<div class="slogan col-md-5">	
+			<h1>IMAX Caracas</h1>
+		</div>	
+		<div class="col-md-6 logo">
+			<%= image_tag 'movie_film.png' %>
+
+		</div>
+	</div>
+
+	<% @shows.each do |show| %>
+	<div class= "movie-box col-md-12 ">
+	<div class="img-pelicula col-md-2">
+		<img src="<%= show.movie.ext %>">
+		</div>
+		<div class="nombre col-md-2">
+			<h1><%= show.movie.title %></h1>
+			<h4><%= show.movie.genero %></h4>
+			<h1><%= show.movie.subtitle%></h1>
+			<h1><%= show.movie.classification%></h1>
+		</div>
+		<div class="sinpsis col-md-2">
+			<p><%= show.movie.summary %></p>
+		</div>
+		<div class="seccion-compra col-md-4">
+			<h1>Compra</h1>
+			<a href="<%= buy_path(show) %>"><button type="button" class="btn btn-warning"><a href="<%= buy_path(show) %>">Comprar!!</button></a>
+
+		</div>
+	</div>
+	<% end  %>

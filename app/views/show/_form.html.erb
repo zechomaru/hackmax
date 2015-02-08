@@ -1,0 +1,43 @@
+<h1>Editing article</h1>
+ 
+<%= form_tag :show, url: show_path(@show), method: :put do |f| %>
+ 
+  <% if @show.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@show.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @show.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   <p>
+    <%= label_tag(:show, "fecha:") %>
+    <%= date_field(:show, :date_show) %>
+  </p>
+  <p>
+    <%= label_tag(:show, "hora:") %>
+    <%= time_field(:show, :time_show) %>
+  </p>
+  <p>
+    <%= label_tag(:id_movie, "Pelicula:") %>
+    <%=collection_select(:show, :movie_id, Movie.all, :id, :title) %>
+  </p>
+  <p>
+    <%= label_tag(:id_sala, "Sala:") %>
+    <%=collection_select(:show, :theater_id, Theater.all, :id, :name) %>
+  </p>
+ 
+
+  <p>
+    <%= submit_tag "Enviar" %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', show_path %>

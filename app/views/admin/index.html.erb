@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="row boxs">
+    <div class="col-md-12">
+    <a href="<%= admin_movie_path %>" style="text-decoration:none">
+      <div class="box">
+        <p class="title_box">Peliculas</p>
+        <div class="row">
+          <div class="col-md-6">
+            <span class="fa-film icon_box"></span> 
+          </div>
+          <div class="col-md-6">
+             <p class="count_adm"><%= @moviesCount %></p>
+          </div>
+        </div>
+
+      </div>
+      </a>
+      <a href="<%= admin_show_path %>" style="text-decoration:none">  
+        <div class="box2">
+          <p class="title_box">Funciones</p>
+          <div class="row">
+            <div class="col-md-6">
+              <span class="fa-clock-o icon_box"></span> 
+            </div>
+            <div class="col-md-6">
+              <p class="count_adm"><%= @functionsCount %></p>    
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="<%= admin_theater_path %>" style="text-decoration:none">  
+        <div class="box3">
+          <p class="title_box">Salas</p>
+          <div class="row">
+            <div class="col-md-6">
+              <span class="fa-clock-o icon_box"></span> 
+            </div>
+            <div class="col-md-6">
+              <p class="count_adm"><%= @salasCount %></p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <div class="box4">
+        <p class="title_box">Usuarios</p>
+        <div class="row">
+          <div class="col-md-6">
+            <span class="fa-user icon_box"></span> 
+          </div>
+          <div class="col-md-6">
+            <p class="count_adm">2</p>
+          </div>
+        </div>
+      </div>
+      <div class="box5">
+        <p class="title_box">Factura</p>
+        <div class="row">
+          <div class="col-md-6">
+            <span class="fa-usd icon_box"></span> 
+          </div>
+          <div class="col-md-6">
+            <p class="count_adm">3</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,96 @@
+
+<div class="container">
+  <div class="row color_movie">
+    <div class="col-md-12">
+    <div class="row movie_show">
+      <div class="col-md-10">
+          <h3 class="color_white">Peliculas</h3>
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-default form_create">Nueva Pelicula</button>
+      </div>
+    </div>
+      <div class="row">
+
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-12 form_movie">
+              <%= form_tag new_movie_path, method: :post, class: "form-inline" do %>
+                  <%= label_tag :Titulo %>
+                  <%= text_field :movie, :title, class: "form-control" %>
+                  <%= label_tag :Genero %>
+                  <%= text_field :movie, :genero, class: "form-control" %>
+                 <%= label_tag :Lenguaje %>
+                 <%= text_field :movie, :language, class: "form-control" %>
+                 <%= label_tag :Subtitulo %>
+                 <%= text_field :movie, :subtitle, class: "form-control" %>
+                 </br></br>
+                 <%= label_tag :Duracion %>
+                 <%= time_field :movie, :duration, class: "form-control" %>
+
+                 <%= label_tag :Extreno %>
+                 <%= date_field :movie, :release_data, class: "form-control" %>
+
+                 <%= label_tag :Sinopsis %>
+                 <%= text_area :movie, :summary, class: "form-control" %>
+                 <%= label_tag :Clasificacion %>
+                 <%= text_field :movie, :classification, class: "form-control" %>
+                 </br>
+                 <%= label_tag :Imagen %>
+                 <%= text_field :movie, :ext, class: "form-control  " %>
+
+                <p class="text-center">
+                  <%= submit_tag "Enviar", class: "btn btn-primary" %>
+                </p>
+              <% end %>
+            </div>
+          </div>
+          <div class="row">
+          <div class="col-md-12">
+          <table class="table table-striped table-hover table_styl">
+                <tr>
+                  <th>Titulo</th>
+                  <th>Genero</th>
+                  <th>Language</th>
+                  <th>Subtitulos</th>
+                  <th>Duration</th>
+            <th>Release_date</th>
+            <th>Summary</th>
+            <th>Classificacion</th>
+            <th>Imagen</th>
+                  <th colspan="3">Aciones</th>
+                </tr>
+               
+                <% @movies.each do |movie| %>
+                  <tr>
+                    <td><%= movie.title %></td>
+                    <td><%= movie.genero %></td>
+                    <td><%= movie.language %></td>
+                    <td><%= movie.subtitle %></td>
+                    <td><%= movie.duration %></td>
+                    <td><%= movie.release_data %></td>
+                    <td><%= movie.summary %></td>
+                    <td><%= movie.classification %></td>
+                    <td><%= image_tag movie.ext, :class => "img_preview" %></td>
+                    <td><%= link_to 'Show', movie_path(movie) %></td>
+                    <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+                    <td><%= link_to 'Destroy', movie_path(movie),
+                                  method: :delete,
+                                  data: { confirm: 'Estas seguro que desea eliminar esta pelicula?' } %></td>         
+                  </tr>
+                <% end %>
+          </table>
+          </div>      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(function(){
+  $('.form_create').on('click', mostrarFormulario)
+  function mostrarFormulario(){
+    $('.form_movie').slideToggle()
+  }
+});
+</script>

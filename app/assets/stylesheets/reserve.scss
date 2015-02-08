@@ -1,0 +1,69 @@
+// Place all the styles related to the reserve controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.D{
+	background-color: #5074D0;
+}
+.D:hover{
+	background-color: #8B8B8B;
+}
+.O{
+	background-color: red;
+}
+.R{
+	background-color: orange;
+}
+.check{
+	background-color: #8B8B8B;
+}
+.seats{
+	height: 40px;
+	width: 40px;
+	display: inline-block;
+	border-radius: 10px 10px 0 0;
+	color: white;
+}
+
+.check:before{
+	content: "\0f00c";
+	font: 47px "FontAwesome";
+  	color: #ffffff;
+}
+.check:hover:before{
+	content: "\f00d";
+	font: 47px "FontAwesome";
+  	color: #ffffff;
+	
+}
+.seats_row{
+	margin-top: 50px;
+}
+.avaible:before{
+	content: "\f111";
+	font: 20px "FontAwesome";
+	color: #5074D0;
+}
+.choice:before{
+	content: "\f111";
+	font: 20px "FontAwesome";
+	color: #8B8B8B;
+}
+.not_avaible:before{
+	content: "\f111";
+	font: 20px "FontAwesome";
+	color: red;
+}
+.status{
+	margin-bottom: 10px;
+}
+.count_price{
+	background-color: #9C95BC;
+	width: 60px;
+	height: 450px;	
+	padding: 12px;
+}
+.checked-place:before{
+	content: "\0f00c";
+	font: 10px "FontAwesome";
+  	color: #ffffff;
+}

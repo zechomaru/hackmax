@@ -1,0 +1,39 @@
+<div class="container">
+	<div class="row seats_row">
+		<div class="col-md-6 col-md-offset-3">
+    <div class="row">
+      <div class="col-md-12 status">
+        <strong class="avaible"> Disponible </strong> <strong class="choice"> Selecionado </strong> <strong class="not_avaible"> No Disponible </strong>
+      </div>
+    </div>
+      <% @seats.each do |seat| %>
+            <div id="<%= seat.id %>" class="seats ">
+              
+            </div>
+        <% end %>
+    </div>
+    <div class="col-md-3">
+      <aside class="count_price">
+        <div class="checked-place">            
+        </div>
+        <div class="checked-result">
+            0
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+<div>
+  <%= form_tag new_movie_path, method: :put do %>
+    <div id="form_submit"></div>
+    <p class="text-center">
+      <%= submit_tag "Enviar", class: "btn btn-primary" %>
+    </p>
+  <% end %>
+</div>
+        
+
+
+
+
+
