@@ -3,7 +3,7 @@ class ReserveController < ApplicationController
 
 	end
 	def show
-		@show = Show.find(params[:id]).theater.seats
+		@show = seats params[:id]
 
 		#theater = show.theater
 		#theater_id = theater.id
@@ -19,8 +19,8 @@ class ReserveController < ApplicationController
 		  render 'new'
 		end
 	end
-	def disable(show_id, seat_id)
-		
+	def seats(id_show)
+		@show = Show.find(params[:id]).theater.seats
 	end
 private
 	def check_available(id_show)
