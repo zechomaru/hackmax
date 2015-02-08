@@ -20,6 +20,11 @@ class ReserveController < ApplicationController
 		end
 	end
 
+	def ocupado (seat_id, show_id)
+    reserve = Reserve.joins(:seat).where(seat_id: seat_id).where(show_id: show_id)
+    !reserve.empty?
+  	end
+
 private
 	def check_available(id_show)
 		@show = Show.find(params[:id])
