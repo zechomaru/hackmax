@@ -10,13 +10,16 @@ $(function(){
 
 	    $input = $("<input>").attr('id','hidden-'+$seat).attr('type','text').val($seat);
 
-	    if($seat_clicked.hasClass("check")) {
-	    	$('#hidden-'+$seat).remove();
-	    } else {
-	    	$( "#form_submit" ).append($input);
+	    if ($seat_clicked.hasClass("O")) {
+
+	    } else{
+		    if($seat_clicked.hasClass("check")) {
+		    	$('#hidden-'+$seat).remove();
+		    } else {
+		    	$( "#form_submit" ).append($input);
+		    }
+		    $seat_clicked.toggleClass("check");		    	
+	    	
 	    }
-	    $seat_clicked.toggleClass("check");
-	    
-	    
 	});
 });
