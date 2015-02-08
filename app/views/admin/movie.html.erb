@@ -21,7 +21,7 @@
                   <%= label_tag :Genero %>
                   <%= text_field :movie, :genero, class: "form-control" %>
                  <%= label_tag :Lenguaje %>
-                 <%= text_field :movie, :language, class: "form-control" %>
+                 <%= text_field :movie, :lenguage, class: "form-control" %>
                  <%= label_tag :Subtitulo %>
                  <%= text_field :movie, :subtitle, class: "form-control" %>
                  </br></br>
@@ -29,7 +29,7 @@
                  <%= time_field :movie, :duration, class: "form-control" %>
 
                  <%= label_tag :Extreno %>
-                 <%= date_field :movie, :release_data, class: "form-control" %>
+                 <%= date_field :movie, :release_date, class: "form-control" %>
 
                  <%= label_tag :Sinopsis %>
                  <%= text_area :movie, :summary, class: "form-control" %>
@@ -65,10 +65,10 @@
                   <tr>
                     <td><%= movie.title %></td>
                     <td><%= movie.genero %></td>
-                    <td><%= movie.language %></td>
+                    <td><%= movie.lenguage %></td>
                     <td><%= movie.subtitle %></td>
                     <td><%= movie.duration %></td>
-                    <td><%= movie.release_data %></td>
+                    <td><%= movie.release_date %></td>
                     <td><%= movie.summary %></td>
                     <td><%= movie.classification %></td>
                     <td><%= image_tag movie.ext, :class => "img_preview" %></td>

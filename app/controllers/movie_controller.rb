@@ -8,12 +8,12 @@ class MovieController < ApplicationController
 		movie_param = params[:movie]
 		@movie.title = movie_param['title']
 		@movie.genero = movie_param['genero']
-		@movie.language = movie_param['language']
+		@movie.lenguage = movie_param['lenguage']
 		@movie.duration = movie_param['duration']
 		@movie.summary = movie_param['summary']
 		@movie.classification = movie_param['classification']
 		@movie.subtitle = movie_param['subtitle']
-		@movie.release_data = movie_param['release_data']
+		@movie.release_date = movie_param['release_date']
 		@movie.ext = movie_param['ext']
 		if @movie.save
 		  redirect_to admin_movie_path
@@ -50,6 +50,6 @@ class MovieController < ApplicationController
 
 	private
 	  def movie_params
-	    params.require(:movie).permit(:title, :genero, :language, :subtitle, :duration, :release_date, :summary, :classification, :ext)
+	    params.require(:movie).permit(:title, :genero, :lenguage, :subtitle, :duration, :release_date, :summary, :classification, :ext)
 	  end
 end
