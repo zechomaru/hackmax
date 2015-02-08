@@ -19,7 +19,9 @@ class ReserveController < ApplicationController
 		  render 'new'
 		end
 	end
-
+	def disable(show_id, seat_id)
+		
+	end
 private
 	def check_available(id_show)
 		@show = Show.find(params[:id])
