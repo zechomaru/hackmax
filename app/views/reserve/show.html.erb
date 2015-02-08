@@ -6,10 +6,16 @@
         <strong class="avaible"> Disponible </strong> <strong class="choice"> Selecionado </strong> <strong class="not_avaible"> No Disponible </strong>
       </div>
     </div>
-      <% @show.each do |seat| %>
-            <div id="<%= seat.id %>" class="seats D">
+      <% @seats.each do |seat| %>
+          <% if ocupado seat.id, @show_id %>
+            <div id="<%= seat.id %>" class="seats O">
               
             </div>
+            <% else %>
+              <div id="<%= seat.id %>" class="seats D">
+              
+              </div>
+          <% end %>
         <% end %>
     </div>
     <div class="col-md-3">
